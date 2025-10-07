@@ -1,6 +1,10 @@
 FROM taniguti/fungap-base:v1.1.1
 
-ENV FUNGAP_DIR=/workspace/FunGAP
+ENV FUNGAP_DIR=/workspace/FunGAP \
+	AUGUSTUS_BIN_PATH=/opt/conda/bin \
+    AUGUSTUS_CONFIG_PATH=/augustus_config \
+    AUGUSTUS_SCRIPTS_PATH=/opt/conda/bin
+
 
 # Install GeneMark
 COPY gmes_linux_64_4.tar.gz /workspace/FunGAP/external/
