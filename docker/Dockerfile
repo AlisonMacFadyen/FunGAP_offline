@@ -19,5 +19,6 @@ COPY fungap.conf $FUNGAP_DIR/
 # Overwrite with with offline mode functionality for busco
 COPY fungap.py $FUNGAP_DIR/fungap.py
 COPY run_busco.py $FUNGAP_DIR/run_busco.py
+COPY run_braker.py $FUNGAP_DIR/run_braker.py
 COPY busco_datasets.txt $FUNGAP_DIR/busco_datasets.txt
 COPY check_inputs.py $FUNGAP_DIR/check_inputs.py
