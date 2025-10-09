@@ -532,11 +532,14 @@ def run_busco(input_faa, output_dir, busco_dataset, d_path, logger):
     log_dir = os.path.join(output_dir, 'logs')
     # run_busco.py -i <input_fasta> -d <lineage_dataset> -o <output_dir>
     # -l <log_dir>
+
+    busco_datasets_path = "/path/to/busco_datasets"
+
     command = (
         '{} --input_fasta {} --lineage_dataset {} --output_dir {} --log_dir {} --offline --download_path {}'
     ).format(
         d_path['run_busco'], input_faa, busco_dataset, busco_output_dir,
-        log_dir, os.path.join("/path/to/busco_datasets/", busco_dataset)
+        log_dir, busco_datasets_path
     )
     logger_time, logger_txt = logger
     logger_time.debug('START: wrapper_run_busco')
